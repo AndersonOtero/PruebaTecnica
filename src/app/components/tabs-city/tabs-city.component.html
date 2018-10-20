@@ -1,0 +1,18 @@
+<mat-card *ngIf="cities.length > 0">
+
+  <mat-tab-group>
+    <mat-tab *ngFor="let city of cities" label="{{city.NameEntity}}" > 
+      <!-- aqui deberian de ir las temperaturas del obheto city, en caso de haberlas -->
+      <a mat-list-item > 1 DAY : 28º </a>
+      <a mat-list-item > 2 DAY : 27º </a>
+      <a mat-list-item > 1 DAY : 27.5º </a>
+    </mat-tab>
+  </mat-tab-group>
+
+</mat-card>
+
+<div *ngIf="cities.length == 0">
+  <p>sin ciudad, no hay datos climatologicos </p>
+</div>
+
+

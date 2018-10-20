@@ -1,0 +1,16 @@
+<mat-card *ngIf="cities.length > 0">
+
+ <mat-nav-list>
+    <mat-list-item *ngFor="let city of cities">        
+       <button mat-icon-button (click)="deleteCity(city.NameEntity)">
+          <mat-icon>remove</mat-icon>          
+       </button>
+       <a mat-list-item > {{ city.NameEntity }} </a>
+    </mat-list-item>
+  </mat-nav-list>
+  
+</mat-card>
+
+<div *ngIf="cities.length == 0">
+  <p>No hay Ciudades, introduce alguna </p>
+</div>
